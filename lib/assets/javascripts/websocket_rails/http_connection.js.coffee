@@ -14,7 +14,7 @@ class WebSocketRails.HttpConnection extends WebSocketRails.AbstractConnection
 
   constructor: (url, @dispatcher) ->
     super
-    @_url          = "http://#{url}"
+    @_url          = "#{window.location.protocol}//#{url}"
     @_conn         = @_createXMLHttpObject()
     @last_pos      = 0
     try
